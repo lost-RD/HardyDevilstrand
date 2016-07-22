@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>RD - Hardy Devilstrand</name>
+
+    <author>Lost_RD</author>
+
+    <url>https://github.com/lost-RD/</url>
+
+    <targetVersion>0.14.1230</targetVersion>
+
+    <description>Devilstrand will no longer die in extreme cold.</description>
+
+</ModMetaData>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapConditionDefs>
+
+  <MapConditionDef>
+    <defName>ToxicFallout</defName>
+    <conditionClass>HardyDevilstrand.MapCondition_ToxicFallout</conditionClass>
+    <label>toxic fallout</label>
+    <description>A plume of toxic dust from some distant source is slowly settling over this entire region of the planet. Anyone not under a roof will be slowly poisoned.</description>
+    <endMessage>The worst of the toxic fallout has settled.</endMessage>
+    <canBePermanent>true</canBePermanent>
+  </MapConditionDef>
+  
+</MapConditionDefs>
