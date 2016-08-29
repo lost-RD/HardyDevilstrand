@@ -7,8 +7,8 @@
 
     <url>https://ludeon.com/forums/index.php?topic=21938.0</url>
 
-    <targetVersion>0.14.1230</targetVersion>
+    <targetVersion>0.15.1280</targetVersion>
 
-    <description>Devilstrand will no longer die in extreme cold.</description>
+    <description>Devilstrand will no longer die in extreme cold or toxic fallout.</description>
 
 </ModMetaData>
