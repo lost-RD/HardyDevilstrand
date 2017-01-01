@@ -42,11 +42,11 @@ namespace HardyDevilstrand
 		{
 			if (Find.TickManager.TicksGame % CheckInterval == 0)
 			{
-				List<Pawn> allPawnsSpawned = Find.MapPawns.AllPawnsSpawned;
-				for (int i = 0; i < allPawnsSpawned.Count; i++)
+                List<Pawn> allPawnsSpawned = base.Map.mapPawns.AllPawnsSpawned;
+                for (int i = 0; i < allPawnsSpawned.Count; i++)
 				{
 					Pawn pawn = allPawnsSpawned[i];
-					if (!pawn.Position.Roofed() && pawn.def.race.IsFlesh)
+					if (!pawn.Position.Roofed(base.Map) && pawn.def.race.IsFlesh)
 					{
 						float num = 0.028758334f;
 						num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity, true);
@@ -64,15 +64,15 @@ namespace HardyDevilstrand
 			}
 			for (int j = 0; j < this.overlays.Count; j++)
 			{
-				this.overlays[j].TickOverlay();
+				this.overlays[j].TickOverlay(base.Map);
 			}
 		}
 
 		public override void DoCellSteadyEffects(IntVec3 c)
 		{
-			if (!c.Roofed())
+			if (!c.Roofed(base.Map))
 			{
-				List<Thing> thingList = c.GetThingList();
+				List<Thing> thingList = c.GetThingList(base.Map);
 				for (int i = 0; i < thingList.Count; i++)
 				{
 					Thing thing = thingList[i];
@@ -97,9 +97,10 @@ namespace HardyDevilstrand
 
 		public override void MapConditionDraw()
 		{
-			for (int i = 0; i < this.overlays.Count; i++)
+            Map map = base.Map;
+            for (int i = 0; i < this.overlays.Count; i++)
 			{
-				this.overlays[i].DrawOverlay();
+				this.overlays[i].DrawOverlay(map);
 			}
 		}
 
